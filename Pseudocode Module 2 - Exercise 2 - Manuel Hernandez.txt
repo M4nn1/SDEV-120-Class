@@ -1,0 +1,31 @@
+start 
+	Declarations 
+		 num balance
+		 num fee
+		 num numOverdrafts
+		 string BALANCE_PROMPT = "Enter the balance: "
+		 string END_LINE = "Thanks for using this program"
+		 string OVERDRAFT_PROMPT = "Enter the number of overdrafts: "
+		 num PERCENT_FEE = 0.01
+		 num OVERDRAFT_FEE = 5
+	housekeeping()
+	detail()
+	endOfJOb()
+stop
+		 
+housekeeping()
+	output BALANCE_PROMPT
+	input balance	 
+return
+		 
+detail()	 
+	output OVERDRAFT_PROMPT
+	input numOverdrafts
+	fee = (PERCENT_FEE* balance) - (5*numOverdrafts)	 
+	output fee	 
+	output balance - fee 	 
+return		 
+		 
+endOfJOb
+	output END_LINE
+return
