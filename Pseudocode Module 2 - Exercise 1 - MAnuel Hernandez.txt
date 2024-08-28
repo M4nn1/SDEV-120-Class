@@ -1,0 +1,40 @@
+start
+	Declarations
+		string modelName
+		num height
+		num depht
+		num width
+		num capacity 
+		num CUBIC_INCHES = 1728
+		string MODEL_PROMPT = "Enter the model name: "
+		string HEIGHT_PROMPT = "Enter the interior height: " 
+		string WIDTH_PROMPT = "Enter the interior width: "
+		string DEPHT_PROMPT = "Enter the interior depht: "
+		string END_LINE = "End of job"
+	housekeeping()
+	while model <> "XXXX"
+		detailLoop()
+	endwhile
+	endOfJob()
+stop
+	
+	housekeeping()
+		output MODEL_PROMPT
+		input modelName
+	return
+	
+	detailLoop()
+		output HEIGHT_PROMPT
+		input height
+		output DEPHT_PROMPT
+		input depht
+		output WIDTH_PROMPT
+		input width
+		capacity = (height*width*depht)/CUBIC_INCHES
+		output modelName
+		output capacity
+	return
+	
+	endOfJob
+		output END_LINE
+	return
